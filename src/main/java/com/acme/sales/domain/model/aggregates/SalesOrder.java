@@ -11,12 +11,13 @@ public class SalesOrder {
     private SalesOrderStatus status;
     private List<SalesOrderItem> items;
     private double paymentAmount;
-
+//Constructor
     public SalesOrder() {
         this.internalId=UUID.randomUUID();
         this.status=SalesOrderStatus.CREATED;
         paymentAmount=0.0;
     }
+    //Public Methods
     public void addItem(int quantity, double unitPrice, Long productId){
         if (this.status==SalesOrderStatus.APPROVED)
             throw new IllegalStateException("Cannot add items to and approved order");
