@@ -35,7 +35,7 @@ public class SalesOrder {
         this.paymentAmount+=amount;
         verifyIfReadyForDispatch();
     }
-    //ayuda2 mejorado
+    //ayuda2 mejorado puto el que lo lea
     public void dispatch(String street, String number, String city, String state,String zipCode, String country){
         verifyIfReadyForDispatch();
         this.shippingAddress=new Address(street,number,city,state,zipCode,country);
