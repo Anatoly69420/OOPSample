@@ -54,6 +54,9 @@ public class SalesOrder {
         status =SalesOrderStatus.CANCELLED;
         clearItems();
     }
+    public String getShippingAddressAsString(){
+        return shippingAddress.getAdressAsString();
+    }
     private UUID getInternalId(){return internalId;}
     private  void verifyIfReadyForDispatch(){
         if (this.status==SalesOrderStatus.APPROVED) return;
